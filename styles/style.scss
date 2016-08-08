@@ -1,0 +1,3406 @@
+/*1.  CSS RESET*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*2. CLEARFIX*/
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+/*3. BORDER BOX*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*STYLES*/
+
+
+
+
+// MEDIA QUERY GRAB
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+}
+
+		// GLOBAL
+
+body{
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+p{
+	font-family: 'Crimson Text', serif;
+	font-size: 13px;
+}
+
+
+.wrapper{
+	max-width: 900px;
+	margin: 0 auto;
+	position: relative;
+	padding: 10px;
+}
+
+.flexRow{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+
+		// HEADER PARTIAL
+
+header{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../images/hero.jpg);
+	background-size: cover;
+	position: relative;
+}
+
+
+
+nav li a{
+	text-decoration: none;
+	color: white;
+	border-bottom: none;
+	padding-bottom: 7px;
+	transition: 0.25s ease;
+}
+
+nav li a:hover{
+	border-bottom: 1px solid #eeb013;
+}
+
+nav{
+	position: relative;
+	top: 40px;
+}
+
+nav img{
+	width: 129px;
+}
+
+nav ul{
+	padding-top: 17px;
+}
+
+.nav-left{
+	color: white;
+	min-width: 417px;
+}
+
+.nav-right{
+	min-width: 41px;
+}
+
+.topText{
+	color: white;
+	position: absolute;
+	top: calc(50% - 77px);
+	left: calc(50% - 219px);
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 0.9;
+	font-weight: bold;
+	text-align: center;
+		h2{
+			font-size: 4rem;
+			position: relative;
+			top: 5px;
+		}
+		h1{
+			font-size: 5rem;
+		}
+		h6{
+			font-size: 0.6rem;
+			font-style: italic;
+		}
+}
+
+
+.mobileNav{
+	text-align: center;
+	display: none;
+	justify-content: center;
+	li{
+		font-size: 0.9rem;
+		padding-bottom: 9px;
+	}
+}
+
+.navWrapper{
+	justify-content: space-between;
+}
+
+.hamburger{
+	display: none;
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	// margin-right: 15px;
+	cursor: pointer;
+}
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.topText{
+		color: white;
+		position: absolute;
+		top: calc(60% - 61px);
+		left: calc(50% - 175px);
+		font-family: 'Montserrat', sans-serif;
+		letter-spacing: 0.9;
+		font-weight: bold;
+		text-align: center;
+			h2{
+				font-size: 3rem;
+				position: relative;
+				top: 5px;
+			}
+			h1{
+				font-size: 4rem;
+			}
+			h6{
+				font-size: 0.6rem;
+				font-style: italic;
+				font-family: 'Crimson Text', serif;
+			}
+	}
+
+	.mobileNav{
+		text-align: center;
+		display: none;
+		justify-content: center;
+		li{
+			font-size: 0.9rem;
+			padding-bottom: 9px;
+		}
+	}
+
+	.navWrapper{
+		justify-content: space-between;
+		display: none;
+	}
+
+	.hamburger{
+		display: block;
+		font-size: 40px;
+		color: white;
+		text-align: center;
+		// margin-right: 15px;
+		cursor: pointer;
+	}
+
+		.mobileNav li.compass{
+	color: #f6b138;
+	font-size: 1.2rem;
+}
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.topText{
+		color: white;
+		position: absolute;
+		top: calc(60% - 45px);
+		left: calc(50% - 132px);
+		font-family: 'Montserrat', sans-serif;
+		letter-spacing: 0.9;
+		font-weight: bold;
+		text-align: center;
+			h2{
+				font-size: 2rem;
+				position: relative;
+				top: 5px;
+			}
+			h1{
+				font-size: 3rem;
+			}
+			h6{
+				font-size: 0.6rem;
+				font-style: italic;
+			}
+	}
+
+
+
+}
+
+
+		// WELCOME SECTION PARTIAL
+
+
+.welcome{
+	padding-top: 60px;
+		.imageWrapper img{
+			height: 286px;
+
+		}
+		.textLeftMotif{
+			text-align: left;
+			width: 600px;
+			position: relative;
+			h6{
+				color: #6f6f6f;
+				margin-bottom: 15px;
+			}
+			h2{
+				color: black;
+				margin-bottom: 15px;
+				font-size: 1.2rem;
+			}
+			p{
+				color: #6f6f6f;
+				line-height: 1.5
+			}
+			a.moreServices{
+				text-decoration: none;
+				margin-top: 20px;
+				width: 50px;
+				height: 50px;
+				// position: absolute;
+				// bottom: -60px;
+				margin-right: 0;
+				display: inline-block;
+				h5{
+					border: 1px solid black;
+					border-radius: 3px;
+					padding: 15px;
+					width: 118px;
+					color: black;
+					margin-right: 0;
+					margin-top: 20px;
+					text-align: left;
+				}
+			}
+		}
+	.serviceOptions{
+		padding-top: 20px;
+			h5{
+				padding-top: 20px;
+				padding-left: 5px;
+				// width: 50px;
+			}
+		.serviceCircle{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			border: 1px solid #d8d8d8;
+			position: relative;
+			font-size: 1.2rem;
+
+				i{
+					position: absolute;
+					top: 14px;
+					left: 14px;
+				}
+		}
+	}
+}
+
+
+
+.titleMotif{
+	margin: 0 auto;
+	display: block;
+	// width: 186px;
+	text-align: center;
+	padding-top: 50px;
+	position: relative;
+		h5{
+			font-weight: bold;
+			letter-spacing: 4px;
+			padding-bottom: 12px;
+		}
+		.hammers{
+			img{
+				width: 180px;
+				padding-bottom: 13px;
+			
+			}
+			
+		}
+		h6{
+			color: grey;
+			font-style: italic;
+			padding-bottom: 50px;
+		}
+}
+
+.titleMotif img{
+	margin: 0 auto;
+	display: block;
+}
+
+
+.welcomeBottomButtons{
+	margin: 0 auto;
+	width: 550px;
+	padding-bottom: 30px;
+		.button {
+			// border: 1px solid black;
+		}
+		a{
+			text-decoration: none;
+			padding: 10px;
+			width: 100%;
+			height: 100%;
+			border: 1px solid black;
+			display: inline-block;
+			color: black;
+			border-radius: 3px;
+			padding: 10px;
+			transition: 0.25s ease;
+			&:hover{
+				border: 1px solid #eeb013;
+			}
+
+		}
+}
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.welcome{
+	padding-top: 60px;
+		.imageWrapper img{
+			height: 280px;
+			display: none;
+		}
+		.textLeftMotif{
+			text-align: left;
+			width: 600px;
+			position: relative;
+			padding: 10px;
+			h6{
+				color: #6f6f6f;
+				margin-bottom: 15px;
+			}
+			h2{
+				color: black;
+				margin-bottom: 15px;
+				font-size: 1.2rem;
+			}
+			p{
+				color: #6f6f6f;
+				line-height: 1.5
+			}
+			a.moreServices{
+				text-decoration: none;
+				margin-top: 20px;
+				width: 50px;
+				height: 50px;
+				// position: absolute;
+				// bottom: -60px;
+				margin-right: 0;
+				display: inline-block;
+				h5{
+					border: 1px solid black;
+					border-radius: 3px;
+					padding: 15px;
+					width: 118px;
+					color: black;
+					margin-right: 0;
+					margin-top: 20px;
+					text-align: left;
+				}
+			}
+		}
+	.serviceOptions{
+		padding-top: 20px;
+			h5{
+				padding-top: 20px;
+				padding-left: 5px;
+				// width: 50px;
+			}
+		.serviceCircle{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			border: 1px solid #d8d8d8;
+			position: relative;
+			font-size: 1.2rem;
+
+				i{
+					position: absolute;
+					top: 14px;
+					left: 14px;
+				}
+		}
+	}
+}
+
+main.flexRow{
+	justify-content: center;
+}
+
+
+
+.titleMotif{
+	margin: 0 auto;
+	display: block;
+	// width: 186px;
+	text-align: center;
+	padding-top: 50px;
+	position: relative;
+		h5{
+			font-weight: bold;
+			letter-spacing: 4px;
+			padding-bottom: 12px;
+		}
+		.hammers{
+			img{
+				width: 180px;
+				padding-bottom: 13px;
+			
+			}
+			
+		}
+		h6{
+			color: grey;
+			font-style: italic;
+			padding-bottom: 50px;
+		}
+}
+
+.titleMotif img{
+	margin: 0 auto;
+	display: block;
+}
+
+
+.welcomeBottomButtons{
+	margin: 0 auto;
+	max-width: 478px;
+	padding: 10px;
+	padding-bottom: 30px;
+
+		.button {
+			// border: 1px solid black;
+		}
+		a{
+			text-decoration: none;
+			padding: 10px;
+			width: 100%;
+			height: 100%;
+			border: 1px solid black;
+			display: inline-block;
+			color: black;
+			border-radius: 3px;
+			padding: 10px;
+			transition: 0.25s ease;
+			&:hover{
+				border: 1px solid #eeb013;
+			}
+
+		}
+}
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.welcome{
+		padding-top: 60px;
+			.imageWrapper img{
+				height: 280px;
+			}
+			.textLeftMotif{
+				text-align: center;
+				width: 600px;
+				position: relative;
+				h6{
+					color: #6f6f6f;
+					margin-bottom: 15px;
+				}
+				h2{
+					color: black;
+					margin-bottom: 15px;
+					font-size: 1.2rem;
+				}
+				p{
+					color: #6f6f6f;
+					line-height: 1.5
+				}
+				a.moreServices{
+					text-decoration: none;
+					margin-top: 20px;
+					width: 50px;
+					height: 50px;
+					// position: absolute;
+					// bottom: -60px;
+					margin-right: 0;
+					display: inline-block;
+					h5{
+						border: 1px solid black;
+						border-radius: 3px;
+						padding: 15px;
+						width: 118px;
+						color: black;
+						margin-right: 0;
+						margin-top: 20px;
+						text-align: left;
+						position: absolute;
+						left: calc(50% - 59px);
+					}
+				}
+			}
+		.serviceOptions{
+			padding-top: 20px;
+			    /* width: 378px; */
+			    flex-direction: column;
+			    align-items: center;
+				h5{
+					padding-top: 20px;
+					padding-left: 5px;
+					// width: 50px;
+				}
+			.serviceCircle{
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				border: 1px solid #d8d8d8;
+				position: relative;
+				font-size: 1.2rem;
+
+					i{
+						position: absolute;
+						top: 14px;
+						left: 14px;
+					}
+			}
+		}
+	}
+
+	.option{
+		padding-bottom: 12px;
+	}
+
+	.titleMotif{
+		margin: 0 auto;
+		display: block;
+		// width: 186px;
+		text-align: center;
+		padding-top: 50px;
+		position: relative;
+			h5{
+				font-weight: bold;
+				letter-spacing: 4px;
+				padding-bottom: 12px;
+			}
+			.hammers{
+				img{
+					width: 180px;
+					padding-bottom: 13px;
+				
+				}
+				
+			}
+			h6{
+				color: grey;
+				font-style: italic;
+				padding-bottom: 39px;
+			}
+	}
+
+	.titleMotif img{
+		margin: 0 auto;
+		display: block;
+	}
+
+
+	.welcomeBottomButtons{
+		margin: 0 auto;
+		/* margin: 10px; */
+		max-width: 228px;
+		padding-bottom: 30px;
+		flex-wrap: wrap;
+		justify-content: center;
+			.button {
+				margin: 5px;
+			}
+			a{
+				text-decoration: none;
+				padding: 10px;
+				width: 100%;
+				height: 100%;
+				border: 1px solid black;
+				display: inline-block;
+				color: black;
+				border-radius: 3px;
+				padding: 10px;
+				transition: 0.25s ease;
+				&:hover{
+					border: 1px solid #eeb013;
+				}
+
+			}
+	}
+
+}
+
+
+	// FULL BLEED PHOTO STRIP PARTIAL
+
+.fullBleedPhotoStrip{
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 0;
+	line-height: 0;
+		.fbpsImage {
+			width: 25%;
+				img{
+					width: 100%;
+				}
+		}
+}
+
+.mobileFbpsReplacement{
+	display: none;
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	.fullBleedPhotoStrip{
+		display: flex;
+		flex-wrap: wrap;
+		font-size: 0;
+		line-height: 0;
+			.fbpsImage {
+				width: 33.3%;
+					img{
+						width: 100%;
+					}
+			}
+	}
+
+	.fbpsImage7{
+		display: none;
+	}
+
+	.fbpsImage8{
+		display: none;
+	}
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.fullBleedPhotoStrip{
+		display: flex;
+		flex-wrap: wrap;
+		font-size: 0;
+		line-height: 0;
+			.fbpsImage {
+				width: 50%;
+					img{
+						width: 100%;
+					}
+			}
+	}
+
+	.fbpsImage5{
+		display: none;
+	}
+
+	.fbpsImage6{
+		display: none;
+	}
+
+	.fbpsImage7{
+		display: none;
+	}
+
+	.fbpsImage8{
+		display: none;
+	}
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.fullBleedPhotoStrip{
+		display: flex;
+		flex-wrap: wrap;
+		font-size: 0;
+		line-height: 0;
+		display: none;
+
+			.fbpsImage {
+				width: 50%;
+				display: none;
+					img{
+						width: 100%;
+					}
+			}
+	}
+
+
+
+	.mobileFbpsReplacement img{
+		width: 100%;
+
+	}
+
+	.mobileFbpsReplacement{
+		// transform: rotate(-90deg);
+		width: 90%;
+		// padding: 10px;
+		// overflow: hidden;
+		display: block;
+		// height: 300px;
+		margin: 0 auto;
+		padding-top: 10px;
+	}
+
+}
+
+
+		// WHY CHOOSE US PARTIAL
+
+
+.textLeftMotif2{
+	text-align: left;
+	width: 470px;
+	position: relative;
+	h6{
+		color: #797979;
+		margin-bottom: 15px;
+	}
+	h2{
+		color: black;
+		margin-bottom: 15px;
+		font-size: 1.2rem;
+	}
+	p{
+		color: #797979;
+		line-height: 2;
+		padding-bottom: 15px;
+	}
+}
+
+.whyChooseBottom{
+	margin: 0 auto;
+}
+
+.tempUnderline{
+	border-bottom: 1px solid #ededed;
+}
+
+
+.textLeftUpperLine{
+	width: 50px;
+	height: 1px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: black;
+}
+
+.cellphoneImage img{
+	height: 270px;
+}
+
+
+
+.whyChooseImage{
+	// float: left;
+	width: 112px;
+	img{
+		width: 20px;
+	}
+}
+
+.whyChooseBottom{
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.whyChooseBottom>div{
+	width: 30%;
+	height: 100px;
+	display: flex;	
+	padding: 10px;
+	padding-top: 20px;
+}
+
+.whyChooseBottom h5{
+	font-weight: bold;
+	letter-spacing: 3px;
+	font-size: 0.7rem;
+	padding-bottom: 5px;
+}
+
+.whyChooseBottom p{
+	font-weight: lighter;
+	color: #6f6f6f;
+	line-height: 1.5;
+	font-size: 0.6rem;
+}
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	.whyChooseBottom>div{
+		padding: 10px;
+		padding-top: 20px;
+	}
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+	.textLeftMotif2{
+		text-align: center;
+		width: 512px;
+		position: relative;
+		padding: 10px;
+		padding-bottom: 40px;
+		h6{
+			color: #797979;
+			margin-bottom: 15px;
+		}
+		h2{
+			color: black;
+			margin-bottom: 15px;
+			font-size: 1.2rem;
+		}
+		p{
+			color: #797979;
+			line-height: 2;
+			padding-bottom: 15px;
+		}
+	}
+
+	.whyChooseBottom{
+		margin: 0 auto;
+		padding: 10px;
+	}
+
+	.tempUnderline{
+		border-bottom: none;
+
+	}
+
+
+	.textLeftUpperLine{
+		width: 50px;
+		height: 1px;
+		margin: 0 auto;
+		margin-top: -2px;
+		margin-bottom: 18px;
+		background-color: black;
+	}
+
+	.cellphoneImage img{
+		height: 270px;
+	}
+
+
+
+	.whyChooseImage{
+		// float: left;
+		width: 62px;
+		img{
+			width: 20px;
+		}
+	}
+
+	.whyChooseBottom{
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+	.whyChooseBottom>div{
+		width: 50%;
+		height: 89px;
+		display: flex;
+		padding: 10px;
+		padding-top: 18px;
+	}
+
+	.whyChooseBottom h5{
+		font-weight: bold;
+		letter-spacing: 3px;
+		font-size: 0.7rem;
+		padding-bottom: 5px;
+	}
+
+	.whyChooseBottom p{
+		font-weight: lighter;
+		color: #6f6f6f;
+		line-height: 1.5;
+		font-size: 0.6rem;
+	}
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.textLeftMotif2{
+		text-align: center;
+		width: 512px;
+		position: relative;
+		padding-bottom: 40px;
+		h6{
+			color: #797979;
+			margin-bottom: 15px;
+		}
+		h2{
+			color: black;
+			margin-bottom: 15px;
+			font-size: 1.2rem;
+		}
+		p{
+			color: #797979;
+			line-height: 2;
+			padding-bottom: 15px;
+		}
+	}
+
+	.whyChooseBottom{
+		margin: 0 auto;
+		padding: 10px;
+	}
+
+	.tempUnderline{
+		border-bottom: none;
+
+	}
+
+
+	.textLeftUpperLine{
+		width: 50px;
+		height: 1px;
+		margin: 0 auto;
+		margin-top: -2px;
+		margin-bottom: 18px;
+		background-color: black;
+	}
+
+	.cellphoneImage img{
+		height: 270px;
+		padding: 10px;
+	}
+
+
+
+	.whyChooseImage{
+		// float: left;
+		width: 112px;
+		img{
+			width: 25px;
+			padding-top: 4px;
+		}
+	}
+
+	.whyChooseBottom{
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+	.whyChooseBottom>div{
+		width: 100%;
+		height: 89px;
+		display: flex;
+		padding: 10px;
+		padding-top: 18px;
+	}
+
+	.whyChooseBottom h5{
+		font-weight: bold;
+		letter-spacing: 3px;
+		font-size: 0.7rem;
+		padding-bottom: 5px;
+	}
+
+	.whyChooseBottom p{
+		font-weight: lighter;
+		color: #6f6f6f;
+		line-height: 1.5;
+		font-size: 0.6rem;
+	}
+
+}
+
+
+		// NUMBERS PARTIAL
+
+
+.numbers{
+	background-color: #2f2f2f;
+	width: 100%;
+	color: white;
+	.numbersContainer{
+		text-align: center;
+		width: 25%;
+		padding-top: 80px;
+		padding-bottom: 80px;
+		h2{
+			font-size: 1.7rem;
+			padding-bottom: 12px;
+
+		}
+		h6{
+			font-size: 0.6rem;
+			font-style: italic;
+			color: #909090;
+		}
+		.numbersUnderline{
+			width: 20px;
+			height: 1px;
+			background-color: #909090;
+			margin: 0 auto;
+			margin-top: 20px;
+		}
+	}
+}
+
+@media (max-width: 940px) {
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.numbers{
+		background-color: #2f2f2f;
+		width: 100%;
+		color: white;
+		.numbersContainer{
+			text-align: center;
+			width: 25%;
+			padding-top: 40px;
+			padding-bottom: 40px;
+			h2{
+				font-size: 1.5rem;
+				padding-bottom: 12px;
+
+			}
+			h6{
+				font-size: 0.5rem;
+				font-style: italic;
+				color: #909090;
+			}
+			.numbersUnderline{
+				width: 20px;
+				height: 1px;
+				background-color: #909090;
+				margin: 0 auto;
+				margin-top: 20px;
+			}
+		}
+	}
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.numbers{
+		background-color: #2f2f2f;
+		width: 100%;
+		color: white;
+		.numbersContainer{
+			text-align: center;
+			width: 25%;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			h2{
+				font-size: 1rem;
+				padding-bottom: 7px;
+
+			}
+			h6{
+				font-size: 0.4rem;
+				font-style: italic;
+				color: #909090;
+			}
+			.numbersUnderline{
+				width: 20px;
+				height: 1px;
+				background-color: #909090;
+				margin: 0 auto;
+				margin-top: 13px;
+			}
+		}
+	}
+
+}
+
+
+
+		// TEAM PARTIAL
+
+.teamRow{
+	width: 100%;
+	padding: 10px;
+}
+
+
+.teamRow img{
+	width: 100%;
+}
+
+.teamContainer{
+	position: relative;
+	width: 30%;
+}
+
+.teamText{
+	position: absolute;
+	bottom: 0;
+	color: white;
+	padding:10px;
+	border-top: 1px solid white;
+	width: 100%;
+	h5{
+		font-weight: bold;
+		padding-bottom: 5px;
+	}
+	h6{
+		font-style: italic;
+		font-weight: lighter;
+	}
+}
+
+
+.joinWithUsButton a{
+	display: inline-block;
+	text-decoration: none;
+	border: 1px solid black;
+	padding: 20px;
+	color: black;
+	letter-spacing: 5px;
+}
+
+.joinWithUs{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.joinText{
+	width: 550px;
+	h3{
+		font-weight: bold;
+		padding-bottom: 15px;
+		font-size: 1rem;
+		letter-spacing: 3px;
+	}
+	p{
+		color: grey;
+		line-height: 1.9;
+	}
+}
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.teamRow{
+		width: 100%;
+		padding: 10px;
+		justify-content: center;
+	}
+
+
+	.teamRow img{
+		width: 100%;
+	}
+
+	.teamContainer{
+		position: relative;
+		width: 40%;
+		margin: 10px;
+	}
+
+	.teamContainer1{
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+
+	.teamText{
+		position: absolute;
+		bottom: 0;
+		color: white;
+		padding:10px;
+		border-top: 1px solid white;
+		width: 100%;
+		h5{
+			font-weight: bold;
+			padding-bottom: 5px;
+		}
+		h6{
+			font-style: italic;
+			font-weight: lighter;
+		}
+	}
+
+
+	.joinWithUsButton a{
+		display: inline-block;
+		text-decoration: none;
+		border: 1px solid black;
+		padding: 20px;
+		color: black;
+		letter-spacing: 5px;
+	}
+
+	.joinWithUs{
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.joinWithUsButton{
+		margin: 0 auto;
+		padding-top: 20px;
+	}
+
+	.joinText{
+		width: 90%;
+		padding: 10px;
+		margin: 0 auto;
+		text-align: center;
+		h3{
+			font-weight: bold;
+			padding-bottom: 15px;
+			font-size: 1rem;
+			letter-spacing: 3px;
+		}
+		p{
+			color: grey;
+			line-height: 1.9;
+		}
+	}
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.teamRow{
+		width: 100%;
+		padding: 10px;
+		justify-content: center;
+	}
+
+
+	.teamRow img{
+		width: 100%;
+	}
+
+	.teamContainer{
+		position: relative;
+		width: 58%;
+		margin: 10px;
+	}
+
+	.teamContainer{
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+
+	.teamText{
+		position: absolute;
+		bottom: 0;
+		color: white;
+		padding:10px;
+		border-top: 1px solid white;
+		width: 100%;
+		h5{
+			font-weight: bold;
+			padding-bottom: 5px;
+		}
+		h6{
+			font-style: italic;
+			font-weight: lighter;
+		}
+	}
+
+
+	.joinWithUsButton a{
+		display: inline-block;
+		text-decoration: none;
+		border: 1px solid black;
+		padding: 20px;
+		color: black;
+		letter-spacing: 5px;
+	}
+
+	.joinWithUs{
+		padding-top: 50px;
+		padding-bottom: 1px;
+	}
+
+	.joinWithUsButton{
+		margin: 0 auto;
+		padding-top: 20px;
+	}
+
+	.joinText{
+		width: 90%;
+		padding: 10px;
+		margin: 0 auto;
+		text-align: center;
+		h3{
+			font-weight: bold;
+			padding-bottom: 15px;
+			font-size: 1rem;
+			letter-spacing: 3px;
+		}
+		p{
+			color: grey;
+			line-height: 1.9;
+		}
+	}
+
+}
+
+
+
+	// HAPPY CLIENTS PARTIAL
+
+
+.clientImages{
+	margin: 0 auto;
+	width: 326px;
+}
+
+.clientPic img{
+	width: 96px;
+}
+
+.clientQuote{
+	margin: 0 auto;
+	width: 500px;
+	padding-top: 30px;
+}
+
+.clientQuote p{
+	text-align: center;
+	line-height: 1.9;
+	font-style: italic;
+	color: grey;
+	
+}
+
+
+
+.clientsBottomIcons{
+	padding-top: 40px;
+	margin: 0 auto;
+	width: 400px;
+	text-align: center;
+	h4{
+		color: darkgrey;
+		padding-bottom: 20px;
+		padding-top: 10px;
+		font-size: 0.7rem;
+	}
+	h5{
+		color: grey;
+		font-style: italic;
+		padding-bottom: 20px;
+		font-size: 0.6rem;
+	}
+}
+
+
+.clientDots{
+	width: 35px;
+	margin: 0 auto;
+	padding-bottom: 30px;
+}
+
+.dots{
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background-color: grey;
+}
+
+.dot1{
+	background-color: orange;
+}
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.clientImages{
+		margin: 0 auto;
+		width: 300px;
+	}
+
+	.clientPic img{
+		width: 96px;
+	}
+
+	.clientQuote{
+		margin: 0 auto;
+		max-width: 90%;
+		padding-top: 30px;
+	}
+
+	.clientQuote p{
+		text-align: center;
+		line-height: 1.9;
+		font-style: italic;
+		color: grey;
+		
+	}
+
+
+
+	.clientsBottomIcons{
+		padding-top: 40px;
+		margin: 0 auto;
+		width: 50%;
+		text-align: center;
+		h4{
+			color: darkgrey;
+			padding-bottom: 20px;
+			padding-top: 10px;
+			font-size: 0.7rem;
+		}
+		h5{
+			color: grey;
+			font-style: italic;
+			padding-bottom: 20px;
+			font-size: 0.6rem;
+		}
+	}
+
+
+	.clientDots{
+		width: 35px;
+		margin: 0 auto;
+		padding-bottom: 30px;
+	}
+
+	.dots{
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
+		background-color: grey;
+	}
+
+	.dot1{
+		background-color: orange;
+	}
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+}
+
+
+
+
+
+	// quality and affordable partial
+
+
+	.quality{
+		background-color: #323232;
+		padding-top: 30px;
+			padding-bottom: 30px;
+		h5{
+			color: white;
+			font-style: italic;
+			padding-top: 13px;
+			font-size: 1rem;
+
+			span{
+				color: #eeb013;
+			}
+		}
+	}
+
+
+	.qualityButton a{
+		display: inline-block;
+		padding: 12px;
+		background-color: #eeb013;
+		color: white;
+		text-decoration: none;
+		letter-spacing: 3px;
+		border-radius: 2px;
+		transition: 0.25s ease;
+		font-weight: bold;
+	}
+
+	.qualityButton a:hover{
+		background-color: white;
+		color: black;
+	}
+
+	/* Portrait tablet and small desktops */
+	@media (max-width: 940px) {
+
+	}
+	 
+	/* Landscape phone to portrait tablet */
+	@media (max-width: 767px) {
+		.quality{
+			background-color: #323232;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			h5{
+				color: white;
+				font-style: italic;
+				padding-top: 13px;
+				font-size: 1rem;
+
+				span{
+					color: #eeb013;
+				}
+			}
+		}
+
+		.qualityFlexItem{
+			width: 100%;
+			text-align: center;
+			padding-bottom: 10px;
+		}
+
+
+		.qualityButton a{
+			display: inline-block;
+			padding: 12px;
+			background-color: #eeb013;
+			color: white;
+			text-decoration: none;
+			letter-spacing: 3px;
+			border-radius: 2px;
+			transition: 0.25s ease;
+			font-weight: bold;
+			padding-top: 10px;
+		}
+
+		.qualityButton a:hover{
+			background-color: white;
+			color: black;
+		}
+
+	}
+	 
+	/* Landscape phones and down */
+	@media (max-width: 480px) {
+
+	}
+
+
+
+// BLOG PARTIAL
+
+
+.blogItem{
+	width: 25%;
+	background-color: #eaeaea;
+}
+
+.blogItem img{
+	width: 100%;
+	line-height: 0;
+	font-size: 0;
+}
+
+.blogText{
+	padding: 15px;
+	position: relative;
+	h6{
+		font-size: 0.6rem;
+		font-style: italic;
+		padding-bottom: 9px;
+	}
+	h3{
+		font-size: 0.8rem;
+		font-weight: bold;
+		padding-bottom: 9px;
+	}
+	p{
+		font-size: 0.6rem;
+		line-height: 1.9;
+		color: #6f6f6f;
+	}
+	h4{
+		position: absolute;
+		bottom: 15px;
+		left: 15px;
+	}
+}
+
+img.triangleTop{
+	width: 45px;
+	height: 50px;
+	transform: rotate(90deg);
+	position: absolute;
+	left: -29px;
+	bottom: calc(50% - 23px);
+}
+
+img.triangleBottom{
+	width: 45px;
+	height: 50px;
+	transform: rotate(270deg);
+	position: absolute;
+	right: -29px;
+	bottom: calc(50% - 23px);
+}
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	.blogItem{
+		width: 25%;
+		background-color: #eaeaea;
+	}
+
+	.blogItem img{
+		width: 100%;
+		line-height: 0;
+		font-size: 0;
+	}
+
+	.blogText{
+		padding: 15px;
+		position: relative;
+		h6{
+			font-size: 0.6rem;
+			font-style: italic;
+			padding-bottom: 9px;
+		}
+		h3{
+			font-size: 0.8rem;
+			font-weight: bold;
+			padding-bottom: 9px;
+		}
+		p{
+			font-size: 0.5rem;
+			line-height: 1.5;
+		}
+		h4{
+			position: absolute;
+			bottom: 15px;
+			left: 15px;
+		}
+	}
+
+	img.triangleTop{
+		width: 45px;
+		height: 50px;
+		transform: rotate(90deg);
+		position: absolute;
+		left: -29px;
+		bottom: calc(50% - 23px);
+	}
+
+	img.triangleBottom{
+		width: 45px;
+		height: 50px;
+		transform: rotate(270deg);
+		position: absolute;
+		right: -29px;
+		bottom: calc(50% - 23px);
+	}
+
+}
+
+@media (max-width: 800px) {
+	.blogText p{
+		line-height: 1.2;
+	}
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.blogItem{
+		width: 50%;
+		background-color: #eaeaea;
+		i{
+			display: none;
+		}
+	}
+
+	.blogItem img{
+		width: 100%;
+		line-height: 0;
+		font-size: 0;
+	}
+
+	.blogItem1{
+		order:1;
+		text-align: right;
+	}
+
+	.blogItem2{
+		order:2;
+		text-align: right;
+	}
+
+	.blogItem3{
+		order:4;
+	}
+
+	.blogItem4{
+		order:3;
+	}
+
+	.blogItem4 img.greyTriangle{
+		width: 45px;
+		    height: 50px;
+		    transform: rotate(270deg);
+		    /* position: absolute; */
+		    right: -29px;
+		    left: auto;
+		    bottom: calc(50% - 23px);
+	}
+
+	.blogItem5{
+		order:6;
+		text-align: right;
+		img.greyTriangle{
+			width: 45px;
+			height: 50px;
+			transform: rotate(90deg);
+			position: absolute;
+			left: -29px;
+			bottom: calc(50% - 23px);
+		}
+
+	}
+
+	.blogItem6{
+		order:5;
+	}
+
+	.blogItem7{
+		order:7;
+	}
+
+	.blogItem8{
+		order:8;
+	}
+
+	.blogText{
+		padding: 15px;
+		position: relative;
+		h6{
+			font-size: 0.6rem;
+			font-style: italic;
+			padding-bottom: 9px;
+		}
+		h3{
+			font-size: 0.8rem;
+			font-weight: bold;
+			padding-bottom: 9px;
+		}
+		p{
+			font-size: 1rem;
+			line-height: 1.5;
+		}
+		h4{
+			position: absolute;
+			bottom: 15px;
+			left: 15px;
+		}
+	}
+
+	img.triangleTop{
+		width: 45px;
+		height: 50px;
+		transform: rotate(90deg);
+		position: absolute;
+		left: -29px;
+		bottom: calc(50% - 23px);
+	}
+
+	img.triangleBottom{
+		width: 45px;
+		height: 50px;
+		transform: rotate(270deg);
+		position: absolute;
+		right: -29px;
+		bottom: calc(50% - 23px);
+	}
+
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.blogItem{
+		width: 100%;
+		background-color: #eaeaea;
+		position: relative;
+		i{
+			display: none;
+		}
+	}
+
+
+
+	.blogItem img{
+		width: 100%;
+		line-height: 0;
+		font-size: 0;
+	}
+
+	.blogItem img.blogSizeFill{
+		opacity: 0;
+	}
+
+	.blogItem1{
+		order:1;
+		text-align: right;
+	}
+
+	.blogItem2{
+		order:2;
+		text-align: right;
+	}
+
+	.blogItem3{
+		order:3;
+	}
+
+	.blogItem4{
+		order:4;
+	}
+
+	.blogItem4 img.greyTriangle{
+		width: 45px;
+		    height: 50px;
+		position: absolute;
+		top: -32px;
+		transform: rotate(180deg);
+		left: calc(50% - 23px);
+	}
+
+	.blogItem5{
+		order:6;
+		text-align: right;
+		img.greyTriangle{
+			width: 45px;
+			height: 50px;
+			position: absolute;
+		top: -32px;
+		transform: rotate(180deg);
+		left: calc(50% - 23px);
+		z-index: 2;
+		}
+
+	}
+
+	.blogItem6{
+		order:5;
+	}
+
+	.blogItem7{
+		order:8;
+	}
+
+	.blogItem8{
+		order:7;
+	}
+
+	.blogItem{
+		text-align: center;
+	}
+
+	.blogText{
+		padding: 15px;
+		position: relative;
+		height: 12.5%;
+		h6{
+			font-size: 0.6rem;
+			font-style: italic;
+			padding-bottom: 9px;
+		}
+		h3{
+			font-size: 0.8rem;
+			font-weight: bold;
+			padding-bottom: 9px;
+		}
+		p{
+			font-size: 0.9rem;
+			line-height: 1.5;
+		}
+		h4{
+			position: static;
+			bottom: 15px;
+			left: 15px;
+			padding-top: 10px;
+		}
+	}
+
+	img.triangleTop{
+		width: 45px;
+		height: 50px;
+		transform: rotate(90deg);
+		position: absolute;
+		left: -29px;
+		bottom: calc(50% - 23px);
+	}
+
+	img.triangleBottom{
+		width: 45px;
+		height: 50px;
+		transform: rotate(270deg);
+		position: absolute;
+		right: -29px;
+		bottom: calc(50% - 23px);
+	}
+
+	img.greyTriangle{
+		position: absolute;
+		top: -32px;
+		transform: rotate(180deg);
+		left: calc(50% - 23px);
+		z-index: 2;
+	}
+
+}
+
+
+
+
+// PLANS PARTIAL
+
+
+
+.pricingTopText{
+	width: 100%;
+	max-width: 400px;
+	margin: 0 auto;
+	color: black;
+	letter-spacing: 3px;
+	font-weight: bold;
+	padding-bottom: 45px;
+	padding-top: 20px;
+	text-align: center;
+	span{
+		font-style: italic;
+		color: grey;
+	}
+}
+
+
+.plan{
+	border: 1px solid #ededed;
+	text-align: center;
+	width: 200px;
+	margin-bottom: 30px;
+	transform: scale(1);
+	transition: 0.25s ease;
+	-webkit-box-shadow: 0px 0px 28px -4px rgba(0,0,0,0.0);
+	-moz-box-shadow: 0px 0px 28px -4px rgba(0,0,0,0.0);
+	box-shadow: 0px 0px 28px -4px rgba(0,0,0,0.0);
+
+}
+
+.plan:hover{
+	transform: scale(1.03);
+	-webkit-box-shadow: 0px 0px 58px -22px rgba(0,0,0,0.36);
+	-moz-box-shadow: 0px 0px 58px -22px rgba(0,0,0,0.36);
+	box-shadow: 0px 0px 58px -22px rgba(0,0,0,0.36);
+}
+
+.plan > .getPlanButton{
+	opacity: 0;
+	transition: 0.25s ease;
+}
+
+.plan:hover > .getPlanButton{
+	opacity: 1;
+}
+
+.plan .top{
+	border-bottom: 1px solid #ededed;
+	padding: 10px;
+	h2{
+		letter-spacing: 4px;
+		font-weight: 700;
+		font-size: 0.5rem;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+}
+
+.option p{
+		padding-top: 31px;
+		color: grey;
+	}
+
+
+.planPrice{
+	padding-top: 25px;
+	padding-bottom: 20px;
+	h1{
+		font-size: 1.1rem;
+
+		span.dollaZ{
+			font-size: 0.6rem;
+			position: relative;
+			bottom: 6px;
+		}
+		span.monthly{
+			font-style: italic;
+			font-size: 0.6rem;
+			color: grey;
+		}
+	}
+}
+
+// .optionList{
+// 	padding: 20px;
+// }
+
+a.getPlan{
+	display: inline-block;
+	text-decoration: none;
+	padding: 10px;
+	background-color: black;
+	border: 1px solid black;
+	color: white;
+	font-size: 0.5rem;
+	letter-spacing: 4px;
+	border-radius: 2px;
+	position: relative;
+	top: 15px;
+	font-weight: bold;
+}
+
+a.getPlan:hover{
+	background-color: white;
+	color: black;
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	.pricingTopText{
+		width: 100%;
+		max-width: 400px;
+		margin: 0 auto;
+		color: black;
+		letter-spacing: 3px;
+		font-weight: bold;
+		padding-bottom: 45px;
+		padding-top: 20px;
+		text-align: center;
+		span{
+			font-style: italic;
+			color: grey;
+		}
+	}
+
+
+	.plan{
+		border: 1px solid #ededed;
+		text-align: center;
+		width: 186px;
+		margin-bottom: 30px;
+		transform: scale(1);
+		transition: 0.25s ease;
+		-webkit-box-shadow: 0px 0px 28px -4px rgba(0,0,0,0.0);
+		-moz-box-shadow: 0px 0px 28px -4px rgba(0,0,0,0.0);
+		box-shadow: 0px 0px 28px -4px rgba(0,0,0,0.0);
+
+	}
+
+	.plan:hover{
+		transform: scale(1.03);
+		-webkit-box-shadow: 0px 0px 58px -22px rgba(0,0,0,0.36);
+		-moz-box-shadow: 0px 0px 58px -22px rgba(0,0,0,0.36);
+		box-shadow: 0px 0px 58px -22px rgba(0,0,0,0.36);
+	}
+
+	.plan > .getPlanButton{
+		opacity: 0;
+		transition: 0.25s ease;
+	}
+
+	.plan:hover > .getPlanButton{
+		opacity: 1;
+	}
+
+	.plan .top{
+		border-bottom: 1px solid #ededed;
+		padding: 10px;
+		h2{
+			letter-spacing: 4px;
+			font-weight: 700;
+			font-size: 0.5rem;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		
+	}
+
+	.option p{
+			padding-top: 31px;
+			color: grey;
+		}
+
+
+	.planPrice{
+		padding-top: 25px;
+		padding-bottom: 20px;
+		h1{
+			font-size: 1.1rem;
+
+			span.dollaZ{
+				font-size: 0.6rem;
+				position: relative;
+				bottom: 6px;
+			}
+			span.monthly{
+				font-style: italic;
+				font-size: 0.6rem;
+				color: grey;
+			}
+		}
+	}
+
+	// .optionList{
+	// 	padding: 20px;
+	// }
+
+	a.getPlan{
+		display: inline-block;
+		text-decoration: none;
+		padding: 10px;
+		background-color: black;
+		border: 1px solid black;
+		color: white;
+		font-size: 0.5rem;
+		letter-spacing: 4px;
+		border-radius: 2px;
+		position: relative;
+		top: 15px;
+		font-weight: bold;
+	}
+
+	a.getPlan:hover{
+		background-color: white;
+		color: black;
+	}
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.pricingTopText{
+		width: 100%;
+		max-width: 400px;
+		margin: 0 auto;
+		color: black;
+		letter-spacing: 3px;
+		font-weight: bold;
+		padding-bottom: 45px;
+		padding-top: 20px;
+		text-align: center;
+		span{
+			font-style: italic;
+			color: grey;
+		}
+	}
+
+	.planFlex{
+		justify-content: space-around;
+	}
+
+
+	.plan{
+		border: 1px solid #ededed;
+		text-align: center;
+		width: 186px;
+		margin-bottom: 30px;
+		transform: scale(1);
+		transition: 0.25s ease;
+		-webkit-box-shadow: 0px 0px 28px -4px rgba(0,0,0,0.0);
+		-moz-box-shadow: 0px 0px 28px -4px rgba(0,0,0,0.0);
+		box-shadow: 0px 0px 28px -4px rgba(0,0,0,0.0);
+
+	}
+
+	.plan:hover{
+		transform: scale(1.03);
+		-webkit-box-shadow: 0px 0px 58px -22px rgba(0,0,0,0.36);
+		-moz-box-shadow: 0px 0px 58px -22px rgba(0,0,0,0.36);
+		box-shadow: 0px 0px 58px -22px rgba(0,0,0,0.36);
+	}
+
+	.plan > .getPlanButton{
+		opacity: 1;
+		transition: 0.25s ease;
+	}
+
+	// .plan:hover > .getPlanButton{
+	// 	opacity: 1;
+	// }
+
+	.plan .top{
+		border-bottom: 1px solid #ededed;
+		padding: 10px;
+		h2{
+			letter-spacing: 4px;
+			font-weight: 700;
+			font-size: 0.5rem;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		
+	}
+
+	.option p{
+			padding-top: 31px;
+			color: grey;
+		}
+
+
+	.planPrice{
+		padding-top: 25px;
+		padding-bottom: 20px;
+		h1{
+			font-size: 1.1rem;
+
+			span.dollaZ{
+				font-size: 0.6rem;
+				position: relative;
+				bottom: 6px;
+			}
+			span.monthly{
+				font-style: italic;
+				font-size: 0.6rem;
+				color: grey;
+			}
+		}
+	}
+
+	// .optionList{
+	// 	padding: 20px;
+	// }
+
+	a.getPlan{
+		display: inline-block;
+		text-decoration: none;
+		padding: 10px;
+		background-color: black;
+		border: 1px solid black;
+		color: white;
+		font-size: 0.5rem;
+		letter-spacing: 4px;
+		border-radius: 2px;
+		position: relative;
+		top: 15px;
+		font-weight: bold;
+	}
+
+	a.getPlan:hover{
+		background-color: white;
+		color: black;
+	}
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+}
+
+
+// FORM PARTIAL
+
+
+.form{
+	background-color: #1c1c1c;
+	// height: 800px;
+	// REMOVE HEIGHT
+	color: white;
+	padding-top: 65px;
+	padding-bottom: 65px;
+
+}
+
+.contact>div{
+	display: flex;
+}
+
+.contact{
+	padding-bottom: 20px;
+}
+
+
+.contactCircle{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: 1px solid grey;
+	color: #f6b138;
+	font-size: 33px;
+	position: relative;
+	i{
+		position: absolute;
+
+	}
+}
+
+
+.fa-mobile{
+	top: 12px;
+	left: 22px;
+}
+
+.fa-map-marker{
+	top: 11px;
+	left: 20px;
+}
+
+.fa-envelope-o{
+	top: 11px;
+	left: 13px;
+}
+
+.contactText{
+	font-style: italic;
+	line-height: 1.8;
+	padding-left: 20px;
+}
+
+
+.contactText1{
+	padding-top: 13px;
+}
+
+.contactText2{
+	padding-top: 4px;
+}
+
+.contactText3{
+	padding-top: 20px;
+}
+
+
+.formField{
+	width: 30%;
+	h5{
+		font-style: italic;
+		position: relative;
+		top: 13px;
+		span{
+			color: #f6b138;
+		}
+	}
+}
+
+.formFieldBig{
+	width: 100%;
+	margin-top: 20px;
+	h5{
+		font-style: italic;
+		position: relative;
+		top: 13px;
+		span{
+			color: #f6b138;
+		}
+	}
+}
+
+.formFieldBig input{
+	width: 100%;
+	background-color: #1c1c1c;
+    border: 0px solid;
+	border-bottom: 1px solid grey;
+	color: white;
+	height: 90px;
+	margin-bottom: 60px;
+
+}
+
+.formField input{
+	width: 100%;
+	background-color: #1c1c1c;
+    border: 0px solid;
+	border-bottom: 1px solid grey;
+	color: white;
+}
+
+.formField1 input{
+	padding-left: 43px;
+}
+
+.formField2 input{
+	padding-left: 45px;
+}
+
+.formField3 input{
+	padding-left: 58px;
+}
+
+
+.sendMe{
+	margin-left: calc(100% - 125px);
+	// margin-top: 40px;
+	width   : 125px;
+    background  : none;
+    cursor  : pointer;
+    font-size   : 16px;
+    color   : #fff;
+    border  : none;
+    padding     : 10px;
+    border: 1px solid white;
+    border-radius: 2px;
+    letter-spacing: 4px;
+    font-size: 0.7rem;
+    transition: 0.25s ease;
+}
+
+.sendMe:hover{
+	background-color: white;
+	color: black;
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.form{
+		background-color: #1c1c1c;
+		color: white;
+		padding-top: 29px;
+		padding-bottom: 32px;
+
+	}
+
+	.contact>div{
+		display: flex;
+	}
+
+	.contact{
+		padding-bottom: 20px;
+	}
+
+
+	.contactCircle{
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		border: 1px solid grey;
+		color: #f6b138;
+		font-size: 33px;
+		position: relative;
+		i{
+			position: absolute;
+
+		}
+	}
+
+
+	.fa-mobile{
+		top: 12px;
+		left: 22px;
+	}
+
+	.fa-map-marker{
+		top: 11px;
+		left: 20px;
+	}
+
+	.fa-envelope-o{
+		top: 11px;
+		left: 13px;
+	}
+
+	.contactText{
+		font-style: italic;
+		line-height: 1.8;
+		padding-left: 20px;
+	}
+
+
+	.contactText1{
+		padding-top: 13px;
+	}
+
+	.contactText2{
+		padding-top: 4px;
+	}
+
+	.contactText3{
+		padding-top: 20px;
+	}
+
+
+	.formField{
+		width: 100%;
+		    margin-top: 20px;
+		h5{
+			font-style: italic;
+			position: relative;
+			top: 13px;
+			span{
+				color: #f6b138;
+			}
+		}
+	}
+
+	.formFieldBig{
+		width: 100%;
+		margin-top: 20px;
+		h5{
+			font-style: italic;
+			position: relative;
+			top: 13px;
+			span{
+				color: #f6b138;
+			}
+		}
+	}
+
+	.formFieldBig input{
+		width: 100%;
+		background-color: #1c1c1c;
+	    border: 0px solid;
+		border-bottom: 1px solid grey;
+		color: white;
+		height: 90px;
+		margin-bottom: 60px;
+
+	}
+
+	.formField input{
+		width: 100%;
+		background-color: #1c1c1c;
+	    border: 0px solid;
+		border-bottom: 1px solid grey;
+		color: white;
+	}
+
+	.formField1 input{
+		padding-left: 43px;
+	}
+
+	.formField2 input{
+		padding-left: 45px;
+	}
+
+	.formField3 input{
+		padding-left: 58px;
+	}
+
+
+	.sendMe{
+		margin-left: calc(100% - 125px);
+		// margin-top: 40px;
+		width   : 125px;
+	    background  : none;
+	    cursor  : pointer;
+	    font-size   : 16px;
+	    color   : #fff;
+	    border  : none;
+	    padding     : 10px;
+	    border: 1px solid white;
+	    border-radius: 2px;
+	    letter-spacing: 4px;
+	    font-size: 0.7rem;
+	    transition: 0.25s ease;
+	}
+
+	.sendMe:hover{
+		background-color: white;
+		color: black;
+	}
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.form{
+		background-color: #1c1c1c;
+		color: white;
+		padding-top: 29px;
+		padding-bottom: 32px;
+
+	}
+
+	.contact>div{
+		display: flex;
+		/* width: 100%; */
+		width: 230px;
+		/* justify-content: space-around; */
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+
+	.contact{
+		padding-bottom: 20px;
+	}
+
+
+	.contactCircle{
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		border: 1px solid grey;
+		color: #f6b138;
+		font-size: 33px;
+		position: relative;
+		i{
+			position: absolute;
+
+		}
+	}
+
+
+	.fa-mobile{
+		top: 12px;
+		left: 22px;
+	}
+
+	.fa-map-marker{
+		top: 11px;
+		left: 20px;
+	}
+
+	.fa-envelope-o{
+		top: 11px;
+		left: 13px;
+	}
+
+	.contactText{
+		font-style: italic;
+		line-height: 1.8;
+		padding-left: 20px;
+	}
+
+
+	.contactText1{
+		padding-top: 13px;
+	}
+
+	.contactText2{
+		padding-top: 4px;
+	}
+
+	.contactText3{
+		padding-top: 20px;
+	}
+
+
+	.formField{
+		width: 100%;
+		    margin-top: 20px;
+		h5{
+			font-style: italic;
+			position: relative;
+			top: 13px;
+			span{
+				color: #f6b138;
+			}
+		}
+	}
+
+	.formFieldBig{
+		width: 100%;
+		margin-top: 20px;
+		h5{
+			font-style: italic;
+			position: relative;
+			top: 13px;
+			span{
+				color: #f6b138;
+			}
+		}
+	}
+
+	.formFieldBig input{
+		width: 100%;
+		background-color: #1c1c1c;
+	    border: 0px solid;
+		border-bottom: 1px solid grey;
+		color: white;
+		height: 90px;
+		margin-bottom: 60px;
+
+	}
+
+	.formField input{
+		width: 100%;
+		background-color: #1c1c1c;
+	    border: 0px solid;
+		border-bottom: 1px solid grey;
+		color: white;
+	}
+
+	.formField1 input{
+		padding-left: 43px;
+	}
+
+	.formField2 input{
+		padding-left: 45px;
+	}
+
+	.formField3 input{
+		padding-left: 58px;
+	}
+
+
+	.sendMe{
+		margin-left: calc(100% - 125px);
+		// margin-top: 40px;
+		width   : 125px;
+	    background  : none;
+	    cursor  : pointer;
+	    font-size   : 16px;
+	    color   : #fff;
+	    border  : none;
+	    padding     : 10px;
+	    border: 1px solid white;
+	    border-radius: 2px;
+	    letter-spacing: 4px;
+	    font-size: 0.7rem;
+	    transition: 0.25s ease;
+	}
+
+	.sendMe:hover{
+		background-color: white;
+		color: black;
+	}
+
+}
+
+
+
+
+// PARTNERS PARTIAL
+
+.partnerFlex{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+
+.partnerBlock{
+	width: 180px;
+	height: 67px;
+	border: 1px solid #ececec;
+	margin: 7px;
+	position: relative;
+	
+}
+
+.partnerBlock img{
+	width: 150px;
+	display: block;
+	margin: auto;
+}
+
+.partnerFlex div:nth-child(1) img{
+	padding-top: 14px;
+}
+
+.partnerFlex div:nth-child(2) img{
+	padding-top: 11px;
+}
+
+.partnerFlex div:nth-child(3) img{
+	padding-top: 11px;
+}
+
+.partnerFlex div:nth-child(4) img{
+	padding-top: 10px;
+}
+
+.partnerFlex div:nth-child(5) img{
+	padding-top: 11px;
+}
+
+.partnerFlex div:nth-child(6) img{
+	padding-top: 4px;
+}
+
+.partnerFlex div:nth-child(7) img{
+	padding-top: 14px;
+}
+
+
+
+.partnerButton{
+	margin:0 auto;
+	width: 180px;
+}
+
+.partnerButton a{
+	display: inline-block;
+	width: 180px;
+	height: 57px;
+	border: 1px solid black;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-size: 0.6rem;
+	padding-top: 23px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+
+
+// FOOTER PARTIAL
+
+
+footer{
+	background-color: #202020;
+	color: white;
+	padding-top: 36px;
+}
+
+.footerFlex>div{
+	// width: 24%;
+	padding-left: 19px;
+	color: #414141;
+	height: 200px;
+
+}
+
+.footer2, .footer3, .footer4{
+	border-left: 1px solid #2e2e2e;
+}
+
+
+.footer1{
+	width: 29%;
+	h4{
+		color: #f6b138;
+		font-size: 0.5rem;
+		padding-bottom: 10px;
+	}
+	p{
+		font-size: 0.7rem;
+		line-height: 1.6;
+		padding-bottom: 10px;
+	}
+	img{
+		width: 90px;
+	}
+}
+
+.footer2{
+	width: 19%;
+	h3{
+		color: white;
+		font-size: 0.7rem;
+	}
+}
+
+.footerListLinks{
+	padding-bottom: 20px;
+}
+
+.footer3{
+	width: 24%;
+	h3{
+		color: white;
+		font-size: 0.7rem;
+	}
+	p{
+		line-height: 1.6;
+		font-size: 0.7rem;
+		padding-bottom: 8px;
+	}
+	p.footer{
+		color: #3a3a3a;
+		padding-bottom: 12px;
+	}
+}
+
+.footer4{
+	width: 24%;
+	h3{
+		color: white;
+		font-size: 0.7rem;
+	}
+}
+
+.InstaRow{
+	width: 101%;
+}
+
+
+
+.window{
+	height: 56px;
+	width: 56px;
+	background-color: #414141;
+	margin: 5px;
+	font-size: 1.5rem;
+	text-align: center;
+	padding-top: 13px;
+	color: #414141;
+	transition: 0.25s ease;
+}
+
+.window:hover{
+	background-color: #f6b138;
+	color: white;
+}
+
+.yellowUnderline{
+	width: 10px;
+	height: 1px;
+	background-color: #f6b138;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+// .flexCol div{
+// 	padding-bottom: 20px;
+// }
+
+.flexCol a{
+	text-decoration: none;
+	color: #414141;
+	font-size: 0.5rem;
+	transition: 0.25s ease;
+}
+
+.flexCol a:hover{
+	color: #f6b138;
+}
+
+.NoLeftMargin{
+	margin-left: 0;
+}
+
+.bottomLine{
+	padding-top: 60px;
+	padding-bottom: 15px;
+	color: #414141;
+}
+
+.socialLinks{
+	width: 200px;
+	font-size: 0.8rem;
+}
+
+.socialLinks i{
+	color: lightgrey;
+	transition: 0.25s ease;
+}
+
+.socialLinks i:hover{
+	color: #f6b138;
+}
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	footer{
+		background-color: #202020;
+		color: white;
+		padding-top: 36px;
+	}
+
+	.footerFlex>div{
+		// width: 24%;
+		padding-left: 19px;
+		color: #414141;
+		height: 200px;
+
+	}
+
+	.footer2, .footer3, .footer4{
+		border-left: 1px solid #2e2e2e;
+	}
+
+
+	.footer1{
+		width: 33%;
+		h4{
+			color: #f6b138;
+			font-size: 0.5rem;
+			padding-bottom: 10px;
+		}
+		p{
+			font-size: 0.55rem;
+			line-height: 1.6;
+			padding-bottom: 10px;
+		}
+		img{
+			width: 90px;
+		}
+	}
+
+	.footer2{
+		width: 19%;
+		display: none;
+		h3{
+			color: white;
+			font-size: 0.7rem;
+		}
+	}
+
+	.footerListLinks{
+		padding-bottom: 20px;
+	}
+
+	.footer3{
+		width: 33%;
+		h3{
+			color: white;
+			font-size: 0.7rem;
+		}
+		p{
+			line-height: 1.6;
+			font-size: 0.55rem;
+			padding-bottom: 8px;
+		}
+		p.footer{
+			color: #3a3a3a;
+			padding-bottom: 12px;
+		}
+	}
+
+	.footer4{
+		width: 33%;
+		h3{
+			color: white;
+			font-size: 0.7rem;
+		}
+	}
+
+	.InstaRow{
+		width: 98%;
+	}
+
+
+
+	.window{
+		height: 56px;
+		width: 56px;
+		background-color: #414141;
+		margin: 5px;
+		font-size: 1.5rem;
+		text-align: center;
+		padding-top: 13px;
+		color: #414141;
+		transition: 0.25s ease;
+	}
+
+	.window:hover{
+		background-color: #f6b138;
+		color: white;
+	}
+
+	.yellowUnderline{
+		width: 10px;
+		height: 1px;
+		background-color: #f6b138;
+		margin-top: 7px;
+		margin-bottom: 7px;
+	}
+
+	// .flexCol div{
+	// 	padding-bottom: 20px;
+	// }
+
+	.flexCol a{
+		text-decoration: none;
+		color: #414141;
+		font-size: 0.5rem;
+		transition: 0.25s ease;
+	}
+
+	.flexCol a:hover{
+		color: #f6b138;
+	}
+
+	.NoLeftMargin{
+		margin-left: 0;
+	}
+
+	.bottomLine{
+		padding-top: 60px;
+		padding-bottom: 15px;
+		color: #414141;
+	}
+
+	.socialLinks{
+		width: 200px;
+		font-size: 0.8rem;
+	}
+
+	.socialLinks i{
+		color: lightgrey;
+		transition: 0.25s ease;
+	}
+
+	.socialLinks i:hover{
+		color: #f6b138;
+	}
+
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	footer{
+		background-color: #202020;
+		color: white;
+		padding-top: 36px;
+	}
+
+	.footerFlex>div{
+		// width: 24%;
+		padding-left: 19px;
+		color: #414141;
+		height: 200px;
+
+	}
+
+	.footer2, .footer3, .footer4{
+		border-left: 1px solid #2e2e2e;
+	}
+ 
+
+	.footer1{
+		width: 90%;
+		text-align: center;
+		h4{
+			color: #f6b138;
+			font-size: 0.9rem;
+			padding-bottom: 10px;
+		}
+		p{
+			font-size: 0.75rem;
+			line-height: 1.6;
+			padding-bottom: 10px;
+		}
+		img{
+			width: 70%;
+			margin: 0 auto;
+			display: block;
+			padding-top: 15px;
+		}
+	}
+
+	.footer2{
+		width: 19%;
+		display: none;
+		h3{
+			color: white;
+			font-size: 0.7rem;
+		}
+	}
+
+	.footerListLinks{
+		padding-bottom: 20px;
+	}
+
+	.footer3{
+		width: 33%;
+		display: none;
+		h3{
+			color: white;
+			font-size: 0.7rem;
+		}
+		p{
+			line-height: 1.6;
+			font-size: 0.55rem;
+			padding-bottom: 8px;
+		}
+		p.footer{
+			color: #3a3a3a;
+			padding-bottom: 12px;
+		}
+	}
+
+	.footer4{
+		width: 33%;
+		display: none;
+		h3{
+			color: white;
+			font-size: 0.7rem;
+		}
+	}
+
+	.InstaRow{
+		width: 98%;
+	}
+
+
+
+	.window{
+		height: 56px;
+		width: 56px;
+		background-color: #414141;
+		margin: 5px;
+		font-size: 1.5rem;
+		text-align: center;
+		padding-top: 13px;
+		color: #414141;
+		transition: 0.25s ease;
+	}
+
+	.window:hover{
+		background-color: #f6b138;
+		color: white;
+	}
+
+	.yellowUnderline{
+		width: 10px;
+		height: 1px;
+		background-color: #f6b138;
+		margin-top: 7px;
+		margin-bottom: 7px;
+	}
+
+	// .flexCol div{
+	// 	padding-bottom: 20px;
+	// }
+
+	.flexCol a{
+		text-decoration: none;
+		color: #414141;
+		font-size: 0.5rem;
+		transition: 0.25s ease;
+	}
+
+	.flexCol a:hover{
+		color: #f6b138;
+	}
+
+	.NoLeftMargin{
+		margin-left: 0;
+	}
+
+	.bottomLine{
+		padding-top: 60px;
+		padding-bottom: 15px;
+		color: #414141;
+	}
+
+	.socialLinks{
+		text-align: center;
+		justify-content: space-around;
+		width: 100%;
+		font-size: 0.8rem;
+	}
+
+	.socialLinks i{
+		color: lightgrey;
+		transition: 0.25s ease;
+	}
+
+	.socialLinks i:hover{
+		color: #f6b138;
+	}
+
+	.copyRight{
+		text-align: center;
+		margin: 0 auto;
+		padding: 8px;
+		p{
+			padding-bottom: 10px;
+		}
+	}
+
+	.socialLinks{
+		text-align: center;
+	}
+
+}
